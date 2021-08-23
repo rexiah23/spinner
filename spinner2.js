@@ -1,17 +1,10 @@
-let currStatus = {
-  0: '|', 
-  1: '/', 
-  2: '-',
-  3: '\\', 
-  4: '|'
-}
+let currStatus = ['|', '/', '-', '\\', '|'];
 
 let delay = 100;
 
-for (let i = 0; i < 5; i++) {
-  const curr = currStatus[i];   
+for (const status of currStatus) {
   setTimeout(() => {
-    process.stdout.write('\r' + currStatus[i] + "        ");
+    process.stdout.write('\r' + status + "        ");
   }, delay);
 
   delay += 100;
